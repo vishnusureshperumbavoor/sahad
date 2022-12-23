@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onSubmit="return formValidate()">
+      <label for="">Name : </label>
+      <input id="name" type="text" /><br /><br />
+
+      <label for="">Password : </label>
+      <input id="password" type="password" /><br /><br />
+
+      <label for="">Retype Password : </label>
+      <input id="retypepass" type="password" /><br /><br />
+
+      <input type="submit" value="Submit" /><br />
+    </form>
+  </body>
+</html>
+  <script>
+    function formValidate() {
+      name = document.getElementById("name").value;
+      password = document.getElementById("password").value;
+      retypepass = document.getElementById("retypepass").value;
+      if (name == "") {
+        alert("name should not be empty");
+        return false;
+      } else if (password == "") {
+        alert("password should not be empty");
+        return false;
+      } else if (password.length < 3) {
+        alert("password should be greater then 3 characters");
+        return false;
+      } else if (retypepass == "") {
+        alert("retype password should not be empty");
+        return false;
+      } else if (password != retypepass) {
+        alert("passwords are not equal");
+        return false;
+      } else {
+        alert("signup successful");
+        return true;
+      }
+    }
+  </script>

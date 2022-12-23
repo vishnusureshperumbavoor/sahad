@@ -1,0 +1,40 @@
+<!-- n natural numbers and their sum -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      sum = 0;
+      num = parseInt(prompt("Enter a positive integer: "));
+      document.write("<h1>Forloop</h1>");
+      for (i = 1; i <= num; i++) {
+        document.write(i, "\t");
+        sum += i;
+      }
+      document.write("<br><h2>Sum =  ", sum, "</h2>");
+
+      document.write("<br><h1>While loop</h1>");
+      (i = 1), (sum = 0);
+      while (i <= num) {
+        document.write(i, "\t");
+        sum += i;
+        i++;
+      }
+      document.write("<br><h2>Sum = ", sum, "</h2>");
+
+      document.write("<br><h1>Do While loop</h1>");
+      (i = 1), (sum = 0);
+      do {
+        document.write(i, "\t");
+        sum += i;
+        i++;
+      } while (i <= num);
+      document.write("<br><h2>Sum = ", sum, "</h2>");
+    </script>
+  </body>
+</html>
